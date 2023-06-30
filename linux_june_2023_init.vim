@@ -1,7 +1,3 @@
-"colorscheme + transparency
-colorscheme tokyonight
-hi Normal guibg=NONE ctermbg=NONE
-
 "no swap files
 set noswapfile
 
