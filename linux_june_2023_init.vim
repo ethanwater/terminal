@@ -4,6 +4,9 @@ set noswapfile
 "set relative live number
 set rnu
 
+
+set scrolloff=8
+
 "tab spacing
 set noexpandtab
 set tabstop=2
