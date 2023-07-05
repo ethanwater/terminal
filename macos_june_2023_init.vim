@@ -13,6 +13,8 @@ hi Normal guibg=NONE ctermbg=NONE
 "no swap files
 set noswapfile
 
+set scrolloff-8
+
 "set relative live number
 set rnu
 
