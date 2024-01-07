@@ -1,3 +1,8 @@
+echo "\033[1;36m$(date -R)\033[0m"
+echo "\033[1;36mOS:\033[0m     \033[1;35m$(uname -m) $(uname -s)-$(uname -r)\033[0m"
+echo "\033[1;36mHost:\033[0m   \033[1;32m$(hostname -f)\033[0m"
+echo "\033[1;36mUptime:\033[0m \033[1;34m$(uptime)\033[0m"
+
 vivian.singledeploy(){
 	cd build/vivian-single/
 	go build .
