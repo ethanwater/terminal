@@ -9,30 +9,14 @@ github(){
 }
 
 nanometal(){
+	#custom kernel launch
 	cd ~/codebase/nanometal
 	qemu-system-x86_64 -drive format=raw,file=target/x86_64-nanometal/debug/bootimage-nanometal.bin
 }
 
 lc(){
+	#custom script for counting all lines in a directory
 	linecount
-}
-
-vivian.singledeploy(){
-	cd ~/codebase/vivian-prototype/build/vivian-single/
-	go build .
-	export PATH="$PATH:$HOME/go/bin"
-	weaver single deploy singledeploy.toml
-}
-
-vivian.multideploy(){
-	cd build/vivian-multi/
-	go build .
-	export PATH="$PATH:$HOME/go/bin"
-	weaver multi deploy multideploy.toml
-}
-
-vivian.app(){
-	open https://localhost:2695/webui/apps-login/
 }
 
 # The next line updates PATH for the Google Cloud SDK.
