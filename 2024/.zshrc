@@ -1,8 +1,12 @@
 #welcome prompt
-echo "\033[1;36m$(date -R)\033[0m"
-echo "\033[1;36mOS:\033[0m     \033[1;35m$(uname -m) $(uname -s)-$(uname -r)\033[0m"
-echo "\033[1;36mHost:\033[0m   \033[1;32m$(hostname -f)\033[0m"
-echo "\033[1;36mUptime:\033[0m \033[1;34m$(uptime)\033[0m"
+
+welcome() {
+    echo "\033[1;36m$(date -R)\033[0m"
+    echo "\033[1;36mOS:\033[0m     \033[1;35m$(uname -m) $(uname -s)-$(uname -r)\033[0m"
+    echo "\033[1;36mHost:\033[0m   \033[1;32m$(hostname -f)\033[0m"
+    echo "\033[1;36mUptime:\033[0m \033[1;34m$(uptime)\033[0m"
+}
+welcome
 
 github(){
 	open https://github.com
@@ -18,6 +22,12 @@ lc(){
 	#custom script for counting all lines in a directory
 	linecount
 }
+
+#displays prompt when screen is cleared
+#clear(){
+#  command clear
+#	 welcome
+#}
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/ethan/Documents/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/ethan/Documents/google-cloud-sdk/path.zsh.inc'; fi
