@@ -7,6 +7,7 @@ call plug#begin()
 	Plug 'rebelot/kanagawa.nvim'
 	Plug 'folke/tokyonight.nvim', { 'as': 'tokyonight'}
 	Plug 'tomasr/molokai'
+	Plug 'morhetz/gruvbox'
 	
 	""coc autocompletion
 	Plug 'sheerun/vim-polyglot'
@@ -71,7 +72,7 @@ require("tokyonight").setup({
   -- or leave it empty to use the default settings
   style = "moon", -- The theme comes in three styles, `storm`, `moon`, a darker variant `night` and `day`
   light_style = "day", -- The theme is used when the background is set to light
-  transparent = false, -- Enable this to disable setting the background color
+  transparent = true, -- Enable this to disable setting the background color
   terminal_colors = true, -- Configure the colors used when opening a `:terminal` in [Neovim](https://github.com/neovim/neovim)
   styles = {
     -- Style to be applied to different syntax groups
@@ -329,8 +330,8 @@ ins_right {
 lualine.setup(config)
 END
 
-colorscheme tokyonight
+colorscheme default 
 highlight Normal guibg=none
 highlight NonText guibg=none
 highlight Normal ctermbg=none
-highlight NonText ctermbg=none
+h

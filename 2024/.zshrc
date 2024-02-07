@@ -1,33 +1,43 @@
-#welcome prompt
+echo "OS:     \033[1;35m$(uname -m) $(uname -s)-$(uname -r)\033[0m"
+echo "Host:   \033[1;36m$(hostname -f)\033[0m"
+echo "Uptime: \033[1;34m$(uptime)\033[0m"
 
-welcome() {
-    echo "\033[1;36m$(date -R)\033[0m"
-    echo "\033[1;36mOS:\033[0m     \033[1;35m$(uname -m) $(uname -s)-$(uname -r)\033[0m"
-    echo "\033[1;36mHost:\033[0m   \033[1;32m$(hostname -f)\033[0m"
-    echo "\033[1;36mUptime:\033[0m \033[1;34m$(uptime)\033[0m"
+vcgit(){
+	echo "\033[1;35m$(vcprompt)\033[0m"
 }
-welcome
+
+setopt prompt_subst
+export PS1='%n@%m:%~ $(vcgit)$ '
 
 github(){
 	open https://github.com
 }
 
 nanometal(){
-	#custom kernel launch
 	cd ~/codebase/nanometal
 	qemu-system-x86_64 -drive format=raw,file=target/x86_64-nanometal/debug/bootimage-nanometal.bin
 }
 
 lc(){
-	#custom script for counting all lines in a directory
 	linecount
 }
 
-#displays prompt when screen is cleared
-#clear(){
-#  command clear
-#	 welcome
-#}
+anima.source(){
+	code ~/codebase/vivian.anima
+}
+
+infra.source(){
+	code ~/codebase/vivian.infra
+}
+
+vivian.deploy(){
+	cd ~/codebase/vivian.infra/build
+	go run main.go
+}
+
+vivian.source(){
+	open https://github.com/vivian-app/vivian.infra 
+}
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/ethan/Documents/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/ethan/Documents/google-cloud-sdk/path.zsh.inc'; fi
