@@ -9,8 +9,20 @@ vcgit(){
 setopt prompt_subst
 export PS1='%n@%m:%~ $(vcgit)$ '
 
-github(){
+github.home(){
 	open https://github.com
+}
+
+repo() {
+    remote_origin_url=$(git config --get remote.origin.url)
+    url="$remote_origin_url"
+    open "$url"
+}
+
+sync.note() {
+	git add .
+	git commit -m 'syncing notes'
+	git push origin main
 }
 
 nanometal(){
@@ -18,9 +30,6 @@ nanometal(){
 	qemu-system-x86_64 -drive format=raw,file=target/x86_64-nanometal/debug/bootimage-nanometal.bin
 }
 
-lc(){
-	linecount
-}
 
 anima.source(){
 	code ~/codebase/vivian.anima
@@ -59,4 +68,5 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
+
 
