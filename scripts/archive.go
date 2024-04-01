@@ -1,14 +1,19 @@
 package main
 
 import (
-	"os/exec"
-	"log"
-	"fmt"
 	"bytes"
 	"errors"
+	"fmt"
+	"log"
+	"os/exec"
+	"path/filepath"
 )
 
 func main() {
+	archiveOriginRepositories()
+}
+
+func archiveOriginRepositories() {
 	fmt.Println("🌐 Archiving origin repositories...")
 	repositories := fetchLocalUserRepositories()	
 	for _, repository := range repositories {
@@ -17,6 +22,19 @@ func main() {
 			fmt.Print("    already installed ✅\n")
 			continue
 		}
+		fmt.Print("    done ⭐\n")
+	}
+}
+
+func fetchOriginRepositories() {
+	fmt.Println("🌐 Updating origin repositories...")
+	repositories := fetchLocalUserRepositories()
+	for _, repository := range repositories {
+		fmt.Println(repository, "...")	
+		err := updateRepository(repository); if err != nil {
+			fmt.Print("    already installed ✅\n")
+			continue
+		}					
 		fmt.Print("    done ⭐\n")
 	}
 }
@@ -48,3 +66,28 @@ func downloadRepository(repositoryName string) error {
 	}
 	return nil
 }
+
+func updateRepository(repositoryName string) error {
+	archiveDirectory, err := filepath.Abs(".") 
+	if err != nil {
+		return errors.New("unable to detect current working directory")
+	}
+
+	directToRepositoryCmd := exec.Command("cd", "repositoryName")
+	err = directToRepositoryCmd.Run(); if err != nil {
+		return errors.New("failed to direct to repository")
+	}
+
+	pullOriginCmd := exec.Command("gh", "pull", "origin", "main")
+	err = pullOriginCmd.Run(); if err != nil {
+		return errors.New("repository already to date")
+	}
+
+	returnToArchiveCmd := exec.Command("cd", string(archiveDirectory))
+	err = returnToArchiveCmd.Run(); if err != nil {
+		return errors.New("fuck man we're lost'")
+	}
+
+	return nil
+}
+
