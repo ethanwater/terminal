@@ -19,6 +19,14 @@ repo() {
     open "$url"
 }
 
+dark() {
+	redshift -o 1250
+}
+
+light() {
+	redshift -x
+}
+
 sync.note() {
 	git add .
 	git commit -m 'syncing notes'
