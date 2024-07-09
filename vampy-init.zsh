@@ -8,6 +8,9 @@ echo 'source <(fzf --zsh)' ~/.zshrc
 
 brew install eza
 
+curl -sL https://github.com/djl/vcprompt/raw/master/bin/vcprompt > ~/bin/vcprompt
+chmod 755 ~/bin/vcprompt
+
 curl -o ~/.zshrc https://raw.githubusercontent.com/ethanwater/terminal/main/.zshrc 
 curl -o ~/.wezterm.lua https://raw.githubusercontent.com/ethanwater/terminal/main/wezterm.lua
 
