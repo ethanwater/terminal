@@ -6,6 +6,8 @@ echo 'eval "$(zoxide init zsh)"' ~/.zshrc
 brew install fzf 
 echo 'source <(fzf --zsh)' ~/.zshrc
 
+brew install eza
+
 curl -o ~/.zshrc https://raw.githubusercontent.com/ethanwater/terminal/main/.zshrc 
 curl -o ~/.wezterm.lua https://raw.githubusercontent.com/ethanwater/terminal/main/wezterm.lua
 

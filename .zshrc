@@ -3,6 +3,7 @@ source <(fzf --zsh)
 setopt prompt_subst
 export PATH="/usr/local/bin:$PATH"
 
+alias ls=eza
 prompt(){
 	echo "OS:     \033[1;35m$(uname -m) $(uname -s)-$(uname -r)\033[0m"
 	echo "Host:   \033[1;36m$(hostname -f)\033[0m"
