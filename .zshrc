@@ -2,6 +2,7 @@ eval "$(zoxide init zsh)"
 source <(fzf --zsh)
 setopt prompt_subst
 export PATH="/usr/local/bin:$PATH"
+export PS1='%n@%m:%~ $(vcgit)$ '
 
 alias ls=eza
 prompt(){
@@ -17,9 +18,12 @@ cl(){
 	prompt
 }
 repo() {
-    remote_origin_url=$(git config --get remote.origin.url)
-    url="$remote_origin_url"
-    open "$url"
+	remote_origin_url=$(git config --get remote.origin.url)
+	url="$remote_origin_url"
+	open "$url"
+}
+vcgit(){
+	echo "\033[1;35m$(vcprompt)\033[0m"
 }
 
 prompt
