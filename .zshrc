@@ -1,7 +1,6 @@
 eval "$(zoxide init zsh)"
 source <(fzf --zsh)
 setopt prompt_subst
-export PS1='%n@%m:%~ $(vcgit)$ '
 export PATH="/usr/local/bin:$PATH"
 
 prompt(){
