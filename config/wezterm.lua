@@ -42,7 +42,7 @@ config.colors = {
 	--   indexed     	= {[136]="#af8700"} , -- Arbitrary colors of the palette in the range from 16 to 255
 }
 
-config.window_background_opacity = 0.98 -- [1.0] alpha channel value with floating point numbers in the range 0.0 (meaning completely translucent/transparent) through to 1.0 (meaning completely opaque)
+config.window_background_opacity = 0.75 -- [1.0] alpha channel value with floating point numbers in the range 0.0 (meaning completely translucent/transparent) through to 1.0 (meaning completely opaque)
 config.colors.background = "#111111"
 config.font_size = 13
 config.font = wezterm.font_with_fallback({
