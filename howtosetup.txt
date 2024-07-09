@@ -1,0 +1,9 @@
+brew install zoxide
+write this in .zshrc -> eval "$(zoxide init zsh)"
+brew install fzf
+write this in .zshrc -> source <(fzf --zsh)
+
+place .wezterm.lua in ~ dir
+
+create nvim directory , place init.lua + lazy-lock.json
+
