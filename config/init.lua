@@ -1041,7 +1041,7 @@ vim.keymap.set("n", "H", require("harpoon.ui").nav_prev)
 -- vim: ts=2 sts=2 sw=2 et
 vim.cmd([[highlight CursorLine guibg=#252525 guifg=NONE]])
 
-vim.diagnostic.config({ underline = false, update_in_insert = true, virtual_text = false })
+vim.diagnostic.config({ underline = false, update_in_insert = true, virtual_text = true })
 require("transparent").setup({ exclude_groups = { "CursorLine", "StatusLine" } })
 local highlight = vim.api.nvim_set_hl
 

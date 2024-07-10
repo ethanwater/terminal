@@ -8,7 +8,8 @@ echo 'eval "$(zoxide init zsh)"' ~/.zshrc
 brew install fzf 
 echo 'source <(fzf --zsh)' ~/.zshrc
 
-brew install eza
+brew install lsd 
+echo 'alias ls=lsd' ~/.zshrc
 
 curl -sL https://github.com/djl/vcprompt/raw/master/bin/vcprompt > ~/bin/vcprompt
 chmod 755 ~/bin/vcprompt
