@@ -4,7 +4,7 @@ setopt prompt_subst
 export PATH="/usr/local/bin:$PATH"
 export PS1='%n@%m:%~ $(vcgit)$ '
 
-alias ls=eza
+alias ls=lsd
 prompt(){
 	echo "OS:     \033[1;35m$(uname -m) $(uname -s)-$(uname -r)\033[0m"
 	echo "Host:   \033[1;36m$(hostname -f)\033[0m"
