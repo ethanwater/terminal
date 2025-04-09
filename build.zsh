@@ -12,6 +12,6 @@ curl -sL https://github.com/djl/vcprompt/raw/master/bin/vcprompt > ~/bin/vcpromp
 chmod 755 ~/bin/vcprompt
 
 mkdir ~/.config/nvim
-curl -o ~/.config/nvim/init.lua https://raw.githubusercontent.com/ethanwater/terminal/main/nvim/init.lua 
+curl -o ~/.config/nvim/init.vim https://raw.githubusercontent.com/ethanwater/terminal/main/nvim/init.lua 
 curl -o ~/.config/nvim/lazy-lock.json https://raw.githubusercontent.com/ethanwater/terminal/main/nvim/lazy-lock.json
 
