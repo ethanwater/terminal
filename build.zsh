@@ -4,6 +4,8 @@ curl -o ~/.zshrc https://raw.githubusercontent.com/ethanwater/terminal/main/.zsh
 
 brew install lsd
 
+brew install neofetch
+
 brew install zoxide
 echo 'eval "$(zoxide init zsh)"' ~/.zshrc
 

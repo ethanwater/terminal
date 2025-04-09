@@ -5,11 +5,11 @@ export PATH="/usr/local/bin:$PATH"
 export PS1='%n@%m:%~ $(vcgit)$ '
 
 alias ls=lsd
-prompt(){
-	echo "OS:     \033[1;35m$(uname -m) $(uname -s)-$(uname -r)\033[0m"
-	echo "Host:   \033[1;36m$(hostname -f)\033[0m"
-	echo "Uptime: \033[1;34m$(uptime)\033[0m"
-}
+# prompt(){
+# 	echo "OS:     \033[1;35m$(uname -m) $(uname -s)-$(uname -r)\033[0m"
+# 	echo "Host:   \033[1;36m$(hostname -f)\033[0m"
+# 	echo "Uptime: \033[1;34m$(uptime)\033[0m"
+# }
 github(){
 	open https://github.com
 }
@@ -26,7 +26,7 @@ vcgit(){
 	echo "\033[1;35m$(vcprompt)\033[0m"
 }
 
-prompt
+neofetch
 
 # The next line updates PATH for the Google Cloud SDK.
 # if [ -f '/Users/ethan/Documents/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/ethan/Documents/google-cloud-sdk/path.zsh.inc'; fi
