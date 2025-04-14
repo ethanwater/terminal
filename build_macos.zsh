@@ -62,8 +62,8 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 
 echo "Installing nvim config..."
-curl -o ~/.config/nvim/init.vim https://raw.githubusercontent.com/ethanwater/terminal/main/nvim/init.vim 
-curl -o ~/.config/nvim/lazy-lock.json https://raw.githubusercontent.com/ethanwater/terminal/main/nvim/lazy-lock.json
+curl -o ~/.config/nvim/init.vim https://raw.githubusercontent.com/ethanwater/terminal/main/init.vim 
+curl -o ~/.config/nvim/lazy-lock.json https://raw.githubusercontent.com/ethanwater/terminal/main/lazy-lock.json
 
 if command -v nvim &>/dev/null; then
 	echo "Installing nvim plugins..."
