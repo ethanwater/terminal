@@ -11,9 +11,9 @@ defaults write com.apple.dock largesize -int 47
 defaults write com.apple.dock autohide -bool true
 killall Dock
 
-mkdir -p ~/Pictures/Screenshots
-mkdir -p ~/Pictures/Wallpapers
-defaults write com.apple.screencapture location -string "~/Pictures/Screenshots"
+mkdir -p ~/Images/Screenshots
+mkdir -p ~/Images/Wallpapers
+defaults write com.apple.screencapture location -string "~/Images/Screenshots"
 killall SystemUIServer
 #--------------------------------------------------------------------
 
