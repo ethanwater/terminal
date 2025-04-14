@@ -22,7 +22,9 @@ killall SystemUIServer
 if ! command -v brew &>/dev/null; then
 	echo "Installing Homebrew... "
 	NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-	eval "$(/opt/homebrew/bin/brew shellenv 2>/dev/null || /usr/local/bin/brew shellenv)"
+	echo >> /Users/ethan/.zprofile
+    	echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/ethan/.zprofile
+    	eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
 if ! command -v brew &>/dev/null; then
